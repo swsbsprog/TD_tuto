@@ -23,7 +23,7 @@ public class WeaponButton : MonoBehaviour
         icon.SetActive(true);
         checkMark.SetActive(false);
     }
-    void OnMouseDown()
+    public void OnClick()
     {
         if (checkMark.activeSelf == false)
         {
@@ -35,6 +35,7 @@ public class WeaponButton : MonoBehaviour
         {
             print($"{weapon} °Ç¹° ÁþÀÚ");
 
+            WeaponSelectUI.instance.OnSelectTower(weapon);
         }
     }
 }
